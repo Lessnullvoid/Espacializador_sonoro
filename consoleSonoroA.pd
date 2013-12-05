@@ -3395,7 +3395,8 @@ it finds four weights to assign to the four active samples;
 #X obj -741 854 catch~ sumbusSR;
 #N canvas 210 22 1280 714 controlsurf 0;
 #X obj 74 -23 r initsl;
-#X obj 175 218 grid grid1 150 0 199 150 0 199 1 1 1 10 10 175 277;
+#X obj 175 218 grid grid1 150 0 199 150 0 199 1 1 1 10 10 -797.469
+302;
 #X floatatom 30 29 5 0 0 0 - - -;
 #X floatatom 74 11 5 0 0 0 - - -;
 #X obj 30 58 pack f f;
@@ -3405,7 +3406,7 @@ it finds four weights to assign to the four active samples;
 #X obj 296 489 s mix_x;
 #X obj 375 85 s slider;
 #X obj 378 59 hsl 145 15 0 3 0 0 empty empty empty -2 -8 0 10 -128992
--262144 -1 14400 1;
+-262144 -1 0 1;
 #X obj 577 590 hsl 145 15 0 10 0 0 empty empty empty -2 -8 0 10 -228856
 -1 -1 10500 0;
 #X text 374 40 VOLUME;
@@ -3647,7 +3648,8 @@ it finds four weights to assign to the four active samples;
 #X msg 267 31 values \$1 \$2;
 #X obj 295 405 / 200;
 #X obj 296 464 / 200;
-#X obj 328 217 grid grid2 150 0 199 150 0 199 1 1 1 10 10 405 288;
+#X obj 328 217 grid grid2 150 0 199 150 0 199 1 1 1 10 10 -524 399.107
+;
 #X obj 504 359 / 200;
 #X obj 504 398 s familia_y;
 #X obj 504 288 / 200;
@@ -3657,7 +3659,8 @@ it finds four weights to assign to the four active samples;
 #X floatatom 796 404 5 0 0 0 - - -;
 #X obj 644 170 * 127;
 #X obj 690 169 * 127;
-#X obj 639 261 grid grid2 127 1 127 127 1 127 0 1 1 10 10 717 301;
+#X obj 639 261 grid grid2 127 1 127 127 1 127 0 1 1 10 10 -333.469
+345;
 #X msg 640 218 goto \$1 \$2;
 #X obj 644 195 pack 1 1;
 #X obj 645 147 unpack f f f;
@@ -3671,7 +3674,8 @@ it finds four weights to assign to the four active samples;
 #X floatatom 1035 413 5 0 0 0 - - -;
 #X obj 874 191 * 127;
 #X obj 920 190 * 127;
-#X obj 876 266 grid grid2 127 1 127 127 1 127 0 1 1 10 10 953 321;
+#X obj 876 266 grid grid2 127 1 127 127 1 127 0 1 1 10 10 23 448.107
+;
 #X msg 876 235 goto \$1 \$2;
 #X obj 876 213 pack 1 1;
 #X obj 874 166 unpack f f f;
@@ -3738,7 +3742,7 @@ it finds four weights to assign to the four active samples;
 -1;
 #X text 55 164 PLAY;
 #X obj 280 163 hsl 128 15 0 3 0 0 volume empty empty -2 -8 0 10 -128992
--262144 -1 12700 1;
+-262144 -1 0 1;
 #X text 274 143 VOLUME;
 #X obj 21 386 outlet;
 #X obj 31 396 outlet;
@@ -3990,8 +3994,8 @@ integrador entre o homem e seu meio. Superando o binÙmio sociedade-natureza
 se propıem aqui o sentimento de pertencimento do homem ao seu ambiente
 \, atravÈs da composiÁ„o conjunta das paisagens sonora e musical.;
 #X restore -616 783 pd proyecto;
-#N canvas 0 22 450 300 instrucciones 0;
-#X text 38 56 Escute suas montanhas \, monte-as se tens as manhas.
+#N canvas 0 22 523 481 instrucciones 0;
+#X text 32 21 Escute suas montanhas \, monte-as se tens as manhas.
 Este console sonoro È uma proposta l˙dico criativa que traz consigo
 a possibilidade de construir uma paisagem sonora em tempo real \, atravÈs
 de 4 grupos de famÌlias que possuem \, cada uma 4 amostras. NÛs temos
@@ -4003,6 +4007,17 @@ puro È o som daquela famÌlia ou daquela amostra. Por fim \, esse È
 um jogo de combinaÁıes \, recortes \, bricolagens \; vamos montando
 nossa paisagem \, ao sabor de nossos ventos \, e experimentando cada
 uma das infinitas possibilidades a disposiÁ„o;
+#X text 34 237 ECUENTRA TU IP >> > Abra Preferencias del Sistema en
+el Dock o la carpeta Aplicaciones > En la ventana resultante \, haga
+clic en el icono Red. > En la ventana Red \, seleccione el AirPort
+en la lista a la izquierda > Tu direcci√≥n IP se mostrar√° debajo de
+la pantalla de estado a la derecha en la frase: AirPort est√° conectado
+con la red <Wireles> y tiene la direcci√≥n IP <su direcci√≥n>;
+#X text 38 371;
+#X text 36 358 El primer cuadro donde se localizan los sonidos individuales
+es controlado por el gyroscopio y acelerometro del ipod/iphone/ipad
+El segundo cuadro que pertenece a las familias lo controla el grid
+x/y en el ipod/iphone/ipad;
 #X restore -616 711 pd instrucciones;
 #N canvas 0 22 450 300 jogo 0;
 #X text 28 64 Barulho de cachoeira \, grilos \, p·ssaros \, vento...sons
@@ -4020,7 +4035,7 @@ as fusıes que desejarmos \, sobretudo \, entre sociedade e natureza
 -228856 -262144 0;
 #X obj -974 499 cnv 15 500 40 empty empty Espacializador__Autonom√≠as_del_silencio
 20 12 0 20 -228856 -262144 0;
-#N canvas 182 172 450 300 controles 1;
+#N canvas 182 172 450 300 controles 0;
 #X text 49 99 Este juego se controloda a traves de una interface con
 acelerometro \, puedes usar los siguientes hardwares: - ipod / ipad
 / iphone + osctouch - android con acelerometro + controlOSC - control
